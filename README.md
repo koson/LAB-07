@@ -467,113 +467,114 @@ public class intergerTest
 กำหนด ```a = 10, b = 20, x = 5, y = 2`` 
 ให้เขียนโปรแกรมเพื่อหาผลลัพธ์ของสมการต่อไปนี้
 ```
+
+1a+b
+
 ```
-1	a+b
-``
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
       z1 = a + b;
       Console.WriteLine("Answer(1) {0:f2}", z1);
-``
+```
 
 ANSWER(1) 30.00
 
 
-2.	x-b
-``
+2.x-b
+```
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
     z2= x - b;
     Console.WriteLine("Answer(2) {0:f2}", z2);
-``  
+```
 
 ANSWER(2) -15.00
 
 
-3.	x*b
-``
+3.x*b
+```
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
    z3 = x* b;
     Console.WriteLine("Answer(3) {0:f2}", z3);
-``
+```
 
 ANSWER(3) 100.00
 
 
-4.	y/a
-``
+4.y/a
+```
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
    z4 = y / a;
    Console.WriteLine("Answer(4) {0:f2}", z4);
-``
+```
 
 ANSWER(4) 0.00
 
 
-5.	b%y
-``
+5.b%y
+```
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
    z5 = b % y;
    Console.WriteLine("Answer(5) {0:f2}", z5);
    
-``
+```
 
 ANSWER(5) 0.00
 
-6.	y+10%x
-``
+6.y+10%x
+```
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
    z6 = y + 10 % x;
    Console.WriteLine("Answer(6) {0:f2}", z6);
-``
+```
 
 ANSWER(6) 2.00
 
-7.	a/3*5
-``
+7.a/3*5
+```
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
    z7 = a / 3 * 5;
    Console.WriteLine("Answer(7) {0:f2}", z7);
-``
+```
 
 ANSWER(7) 15.00
 
-8.	9/2*a
-``
+8.9/2*a
+```
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
    z8 = 9 / 2 * a;
    Console.WriteLine("Answer(8) {0:f2}", z8);
-``
+```
 
 ANSWER(8) 40.00
 
-9.	y%8
-``
+9.y%8
+```
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
    z9 = y % 8;
    Console.WriteLine("Answer(9) {0:f2}", z9);
-``
+```
 
 ANSWER(9) 2.00
 
-10.	100*x+y%2-a
-``
+10.100*x+y%2-a
+```
    int a = 10,b = 20, x = 5,y = 2;
    int z1, z2, z3, z4, z5, z6, z7, z8, z9, z10;
    z10 = 100 * x + y % 2 - a;
     Console.WriteLine("Answer(10) {0:f2}", z10);
-``
+```
 
 ANSWER(10) 490.00
 
-```
+
 ```
 ##2.2.3. ชนิดข้อมูลเลขทศนิยม (Floating Point and Decimal Types)
 ตัวเลขจำนวนทศนิยม มักจะใช้ในการคำนวณทางวิทยาศาสตร์ เนื่องจากค่าในวิทยาศาสตร์ต้องการความละเอียดสูง หรือมีค่าสูงมากกว่าที่เลขจำนวนเต็มจะเก็บได้
