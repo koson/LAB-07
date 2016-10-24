@@ -110,7 +110,7 @@ namespace RandomNumber
 ##การทดลอง การใช้งานข้อมูลชนิด boolean (1)
 
 ให้เขียนโปรแกรมโดยมีข้อกำหนดดังนี้
-
+```
 1. สร้างตัวแปร Random โดยการมีสุ่มเลข 1 หลัก (0 – 9 )
 
 ```
@@ -163,7 +163,7 @@ namespace RandomNumber
 ผลการทดลอง
 
 <img src = "https://github.com/Siriphornyui/LAB-07/blob/master/71.jpg">
-
+```
 ##การเขียนโปรแกรมด้วยตัวดำเนินการทางตรรกะ
 
 ตัวแปรชนิด boolean มักจะถูกใช้เป็นที่เก็บผลที่เกิดจากการดำเนินการทางตรรกะ เช่น AND, OR, NOT เป็นต้น ซึ่งการดำเนินการทางตรรกะจะมีตารางความจริง เป็นตัวบอกผลในการดำเนินการของตัวดำเนินการต่างๆ ดังตัวย่าง
@@ -232,7 +232,6 @@ namespace thruthTable
 ```
 
 ผลที่ได้คือ 
-```
       Y = A AND B
 -----------------------
    A      B     |  Y
@@ -247,15 +246,197 @@ namespace thruthTable
 ##การทดลอง การใช้งานข้อมูลชนิด boolean (2)
 ให้เขียนโปรแกรมเพื่อสร้างตารางความจริงของลอจิกดังต่อไปนี้
 ```
+```
 1. AND
-2. OR
-3. NOT
-4. NAND
-5. NOR
-6. Exclusive OR
+```
+            bool A, B, Y;
+            Console.WriteLine("      Y = A AND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A & B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.ReadKey();
 ```
 
+ผลที่ได้
 
+```
+      Y = A AND B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | False
+ False  True    | False
+ True   False   | False
+ True   True    | True
+-----------------------
+
+```
+2. OR
+```
+            bool A, B, Y;
+            Console.WriteLine("      Y = A OR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = false; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = false; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            A = true; B = true; Y = A | B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
+            Console.WriteLine("-----------------------");
+            Console.ReadKey();
+```
+ผลที่ได้
+
+```
+      Y = A OR B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | False
+ False  True    | True
+ True   False   | True
+ True   True    | True
+-----------------------
+
+```
+3. NOT
+
+```
+bool A, Y;
+            Console.WriteLine("      Y = A NOT B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A   \t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false;  Y = !A ;
+            Console.WriteLine(" {0}\t| {1}", A,  Y);
+            Console.WriteLine("-----------------------");
+            Console.ReadKey();
+```
+ผลที่ได้
+
+```
+    Y = NOT A 
+-------------------
+   A     |  Y
+-------------------
+ False   | True
+-------------------
+```
+4. NAND
+
+```
+            bool A, B, Y;
+            Console.WriteLine("      Y = A NAND B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A && B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            A = false; B = true; Y = A && B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            A = true; B = false; Y = A && B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            A = true; B = true; Y = A && B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            Console.WriteLine("-----------------------");
+            Console.ReadKey();
+```
+ผลที่ได้
+
+```
+      Y = A NAND B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | True
+ False  True    | True
+ True   False   | True
+ True   True    | False
+-----------------------
+
+```
+5. NOR
+
+```
+            bool A, B, Y;
+            Console.WriteLine("      Y = A NOR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A || B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            A = false; B = true; Y = A || B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            A = true; B = false; Y = A || B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            A = true; B = true; Y = A || B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            Console.WriteLine("-----------------------");
+            Console.ReadKey();
+```
+
+ผลที่ได้
+
+```
+      Y = A NOR B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | True
+ False  True    | False
+ True   False   | False
+ True   True    | False
+-----------------------
+
+```
+
+6. Exclusive OR
+```
+            bool A, B, Y;
+            Console.WriteLine("      Y = A XOR B");
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("   A      B\t|  Y");
+            Console.WriteLine("-----------------------");
+            A = false; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            A = false; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            A = true; B = false; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            A = true; B = true; Y = A ^ B;
+            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, !Y);
+            Console.WriteLine("-----------------------");
+            Console.ReadKey();
+```
+
+ผลที่ได้
+
+```
+      Y = A XOR B
+-----------------------
+   A      B     |  Y
+-----------------------
+ False  False   | True
+ False  True    | False
+ True   False   | False
+ True   True    | True
+-----------------------
+
+```
+```
 
   2.2.2.	ชนิดข้อมูลตัวเลขจำนวนเต็ม (Integer Types)
 ข้อมูลชนิดตัวเลข สามารถนำไปใช้งานได้หลากหลาย เช่น การนับหรือแสดงจำนวน การกำหนดลำดับที่ การจัดลำดับ เป็นต้น ค่าที่ใส่ลงในตัวแปร เป็นได้ทั้งค่าบวก ค่าศูนย์ และค่าลบ (มีตัวแปรบางชนิดที่เก็บเฉพาะค่าบวกเพียงอย่างเดียว) การกำหนดค่าใดๆ ให้กับตัวแปร ทำได้โดยการใช้เครื่องหมาย =
