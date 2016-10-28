@@ -113,7 +113,7 @@ namespace RandomNumber
 ```
 1. สร้างตัวแปร Random โดยการมีสุ่มเลข 1 หลัก (0 – 9 )
 
-```
+```csharp
              Random random = new Random();
              int randomNumber = random.Next(0, 9);
              Console.WriteLine(randomNumber);
@@ -124,7 +124,7 @@ namespace RandomNumber
 2. สร้างตัวแปรชนิด integer สำหรับรับค่าจากผู้ใช้
 
 
-```
+```cs
              int Number;
              onsole.Write("Number : ");
              Number = int.Parse(Console.ReadLine());
@@ -134,7 +134,7 @@ namespace RandomNumber
 
 3. สร้างตัวแปร boolean โดยเก็บค่าที่ได้จากการเปรียบเทียบตัวเลขในข้อ 1 และ 2
 
-```
+```cs
              bool a = randomNumber > Number;
              Console.WriteLine("{0}", a);
              Console.ReadKey();
@@ -145,7 +145,7 @@ namespace RandomNumber
 4. ให้พิมพ์ค่าตัวแปร boolean ในข้อ 3 ออกทางหน้าจอ
 
 
-```
+```cs
               Random random = new Random();
               int randomNumber = random.Next(0, 9);
               Console.WriteLine(randomNumber);
